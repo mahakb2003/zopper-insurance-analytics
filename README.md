@@ -5,7 +5,8 @@ An end-to-end data analytics project analyzing insurance portfolio profitability
 This project simulates a real-world insurance analytics scenario where an insurer evaluates policy performance, claim behavior, and financial risk to improve pricing strategy and portfolio profitability.
 
 ## 📊 Power BI Dashboard
-<p align="center"> <img src="images/insurance_dashboard.png" width="700"> </p>
+<p align="center"> <img src="images/Dashboard_1.png" width="500"> </p>
+<p align="center"> <img src="images/Dashboard_2.png" width="500"> </p>
 
 The interactive dashboard tracks key insurance KPIs including:
 
@@ -202,8 +203,6 @@ Tenure_Days = Policy_Tenure × 365
 
 ---
 
----
-
 # 📊 Analytical Questions Solved
 
 This project answers several key business questions.
@@ -213,7 +212,7 @@ This project answers several key business questions.
 ### 1️⃣ What is the total premium collected in 2024?
 
 <p align="center">
-<img src="images/total_premium_analysis.png" width="500">
+<img src="images/Total_Premium_Collected.png" width="400">
 </p>
 
 ---
@@ -221,7 +220,7 @@ This project answers several key business questions.
 ### 2️⃣ What are the monthly claim costs in 2025 and 2026?
 
 <p align="center">
-<img src="images/monthly_claim_trend.png" width="500">
+<img src="images/total_claim_cost_for_each_year_(2025 and 2026).png" width="500">
 </p>
 
 ---
@@ -229,7 +228,7 @@ This project answers several key business questions.
 ### 3️⃣ Which policy tenure has the highest claim-to-premium ratio?
 
 <p align="center">
-<img src="images/loss_ratio_by_tenure.png" width="500">
+<img src="images/claim_premium_ratio_by_tenure.png" width="500">
 </p>
 
 ---
@@ -237,7 +236,7 @@ This project answers several key business questions.
 ### 4️⃣ Does the month of policy purchase affect claim risk?
 
 <p align="center">
-<img src="images/claim_ratio_by_purchase_month.png" width="500">
+<img src="images/claim_ratio_by_purchase_month4.png" width="500">
 </p>
 
 ---
@@ -245,7 +244,7 @@ This project answers several key business questions.
 ### 5️⃣ What is the potential future claim liability if all remaining vehicles claim once?
 
 <p align="center">
-<img src="images/claim_liability_distribution.png" width="500">
+<img src="images/future_claim_liability.png" width="500">
 </p>
 
 ---
@@ -253,7 +252,7 @@ This project answers several key business questions.
 ### 6️⃣ How much premium has been earned vs remaining?
 
 <p align="center">
-<img src="images/earned_vs_remaining_premium.png" width="500">
+<img src="images/earned_vs_remaining_premium6.png" width="500">
 </p>
 
 ---
@@ -290,11 +289,6 @@ An interactive Power BI dashboard was built to analyze portfolio performance.
 
 ### Dashboard File
 Insurance_Analysis_Dashboard.pbix
-
-
-<p align="center">
-<img src="images/dashboard_overview.png" width="750">
-</p>
 
 ### Dashboard Features
 
