@@ -286,7 +286,7 @@ months in 2025 because 4-year tenure policies generate additional claims during 
 
 ### 3. 
  <p align="center">
-<img src="images/query_2_query_3.png" width="650">
+<img src="images/part_2_query_3.png" width="650">
 </p>
 
 ### Insights 
@@ -297,7 +297,7 @@ premium revenue.
 
 ### 4. 
 <p align="center">
-<img src="images/query_2_query_4.png" width="650">
+<img src="images/part_2_query_4.png" width="650">
 </p>
 
 ### Insights 
