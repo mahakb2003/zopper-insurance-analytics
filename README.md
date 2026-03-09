@@ -244,7 +244,7 @@ This project answers several key business questions.
 ### 5️⃣ What is the potential future claim liability if all remaining vehicles claim once?
 
 <p align="center">
-<img src="images/future_claim_liability.png" width="500">
+<img src="images/future_claim_liability5.png" width="500">
 </p>
 
 ---
@@ -264,11 +264,11 @@ Exploratory analysis was performed using **Python (Pandas & NumPy)**.
 ### Key Visualizations
 
 <p align="center">
-<img src="images/claim_distribution.png" width="650">
+<img src="images/profitability_by_tenure_one.png" width="650">
 </p>
 
 <p align="center">
-<img src="images/premium_distribution.png" width="650">
+<img src="images/claim_trend_by_month_two.png" width="650">
 </p>
 
 <p align="center">
@@ -298,24 +298,51 @@ Insurance_Analysis_Dashboard.pbix
 - Policy tenure profitability  
 - Claim type distribution  
 
+Key Insights From Dashboard Analysis: 
+1. The portfolio consists of approximately 1 million policies with a total premium collection of 
+approximately $240 million. 
+2. The analysis shows that claim frequency remains relatively low at around 4.9%, indicating 
+that only a small portion of policies result in claims. 
+3. Total claim cost across the observed period amounts to approximately $494 million, resulting 
+in a portfolio loss ratio of approximately 2.05.  
+4. Policy tenure plays a significant role in claim exposure. Policies with longer tenures contribute 
+more to total claim costs due to the extended coverage period. 
+17 
+5. The majority of claims are first-time claims (Claim Type 1), accounting for more than 99% of 
+total claims. Second claims are extremely rare, indicating that most vehicles file only one claim 
+during the observed period. 
+6. Monthly claim trends show relatively stable claim costs throughout the year, suggesting that 
+claim occurrences are distributed consistently over time rather than concentrated in specific 
+months.
+
 ---
 
 # 🚀 Business Recommendations
 
-### Pricing Optimization
-Policies with higher claim exposure (especially **1-year and 4-year tenures**) should have adjusted premium pricing.
-
-### Risk Monitoring
-Insurance providers should continuously monitor **long-tenure policies** to reduce future claim exposure.
-
-### Predictive Risk Modeling
-Machine learning models can be implemented to **predict claim probability** and improve underwriting decisions.
-
-### Portfolio Risk Monitoring
-Tracking claim trends over time helps insurers **identify emerging risk patterns early**.
-
-### Balanced Policy Portfolio
-Encouraging a mix of policy tenures helps maintain a **balanced risk profile**.
+1. Optimize Pricing Strategy for High-Risk Tenures 
+The analysis shows that longer policy tenures generate higher claim exposure. In particular, 
+3-year and 4-year policies contribute significantly to total claim costs. Insurance providers 
+should consider adjusting premium pricing for longer tenure policies to better reflect the 
+increased risk and duration of coverage. 
+2. Strengthen Risk Monitoring for Long-Term Policies 
+Policies with longer tenures remain active for extended periods, increasing the probability of 
+claims. Continuous monitoring of these policies and periodic risk assessment can help insurers 
+manage claim exposure more effectively. 
+3. Improve Predictive Risk Modeling 
+Using historical policy and claim data, insurers can implement predictive analytics models to 
+estimate the likelihood of claims. Machine learning models could be used to identify high-risk 
+customers and adjust underwriting strategies accordingly. 
+4. Monitor Claim Trends by Policy Purchase Month 
+The dashboard analysis highlights variations in claim ratios across different purchase months. 
+Tracking seasonal patterns in claim frequency can help insurers better anticipate risk and allocate 
+resources accordingly. 
+5. Encourage Shorter Policy Tenures for Lower Risk Segments 
+Shorter tenure policies show lower overall claim exposure. Offering incentives or discounts for 
+shorter policy durations could help maintain a balanced risk portfolio. 
+6. Develop Early Warning Indicators for Claim Risk 
+By monitoring policy characteristics such as tenure, purchase period, and claim history, insurers 
+can develop early warning indicators that help identify potentially high-risk policies before 
+claims occur.
 
 ---
 
