@@ -262,18 +262,52 @@ This project answers several key business questions.
 Exploratory analysis was performed using **Python (Pandas & NumPy)**.
 
 ### Key Visualizations
-
+### 1. 
 <p align="center">
 <img src="images/profitability_by_tenure_one.png" width="650">
 </p>
 
+### Insights 
+•The 3-year policy tenure is the most profitable because it balances premium revenue and claim 
+exposure effectively. 
+•It has the lowest claim-to-premium ratio (1.30), while 1-year policies generate lower premiums 
+and 4-year policies face higher claim risk due to longer coverage periods.
+ 
+### 2.
 <p align="center">
 <img src="images/claim_trend_by_month_two.png" width="650">
 </p>
 
-<p align="center">
-<img src="images/tenure_distribution.png" width="650">
+### Insights 
+•Claim costs remain relatively stable throughout 2025, indicating a consistent pattern of claims 
+due to evenly distributed policy sales. 
+•In 2026, claims appear only in January and February, with higher costs compared to individual 
+months in 2025 because 4-year tenure policies generate additional claims during this period. 
+
+### 3. 
+ <p align="center">
+<img src="images/query_2_query_3.png" width="650">
 </p>
+
+### Insights 
+• The portfolio shows a loss ratio of 2.05, meaning total claims are more than double the 
+premium collected.  
+• This indicates that the portfolio is currently unprofitable, as claim payouts significantly exceed 
+premium revenue. 
+
+### 4. 
+<p align="center">
+<img src="images/query_2_query_4.png" width="650">
+</p>
+
+### Insights 
+A 5% increase in claim frequency raises the portfolio loss ratio from 2.05 to 2.16, indicating that 
+claims consume an even larger portion of premium revenue. This suggests a decline in overall 
+profitability. 
+Recommendation: 
+The insurer should consider adjusting premium pricing, strengthening risk assessment, or 
+improving claim management practices to mitigate the financial impact of increasing claim 
+frequency. 
 
 These analyses help identify patterns in:
 
@@ -298,7 +332,7 @@ Insurance_Analysis_Dashboard.pbix
 - Policy tenure profitability  
 - Claim type distribution  
 
-Key Insights From Dashboard Analysis: 
+### Key Insights From Dashboard Analysis: 
 1. The portfolio consists of approximately 1 million policies with a total premium collection of 
 approximately $240 million. 
 2. The analysis shows that claim frequency remains relatively low at around 4.9%, indicating 
