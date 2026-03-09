@@ -88,50 +88,261 @@ The pipeline:
 -Cleans and integrates datasets
 -Exports the final analytical dataset
 
-## Dataset Creation
+
+# 📂 Dataset Creation
 
 Two main datasets were generated:
 
-1️⃣ Policy Sales Dataset
-Represents vehicle insurance policies purchased during 2024.
-Key characteristics:
--1,000,000 policies simulated
--Each record represents a unique vehicle and customer
--Vehicle value assumed: ₹100,000
--Policy Tenure Distribution
-Tenure	Distribution
-1 Year	20%
-2 Years	30%
-3 Years	40%
-4 Years	10%
-Premium Calculation Rule
+## 1️⃣ Policy Sales Dataset
+
+Represents vehicle insurance policies purchased during **2024**.
+
+### Key Characteristics
+
+- **1,000,000 policies simulated**
+- Each record represents a **unique vehicle and customer**
+- Vehicle value assumed: **₹100,000**
+
+### Policy Tenure Distribution
+
+| Tenure | Distribution |
+|------|------|
+| 1 Year | 20% |
+| 2 Years | 30% |
+| 3 Years | 40% |
+| 4 Years | 10% |
+
+### Premium Calculation Rule
+
+
 Premium = Policy_Tenure × 100
 
-2️⃣ Claims Dataset
--Simulates insurance claims filed against policies based on predefined rules.
--Dataset fields include:
--Claim_ID
--Customer_ID
--Vehicle_ID
--Claim_Amount
--Claim_Date
--Claim_Type
--Claim Amount Rule
--Claim Amount = 10% of Vehicle Value
--Claim Simulation Rules
 
-Claims were generated according to business logic:
+---
 
-For 2025
+## 2️⃣ Claims Dataset
 
-Vehicles purchased on the 7th, 14th, 21st, and 28th of each month were eligible for claims
+Simulates insurance claims filed against policies based on predefined rules.
 
-30% of these vehicles filed a claim
+### Dataset Fields
 
-For 2026
+- Claim_ID  
+- Customer_ID  
+- Vehicle_ID  
+- Claim_Amount  
+- Claim_Date  
+- Claim_Type  
 
-Additional claims generated between Jan 1 – Feb 28
+### Claim Amount Rule
 
-10% of vehicles with 4-year tenure filed claims
 
-Vehicles with a previous claim could file a second claim
+Claim Amount = 10% of Vehicle Value
+
+
+### Claim Simulation Rules
+
+Claims were generated according to business logic.
+
+#### For 2025
+
+- Vehicles purchased on the **7th, 14th, 21st, and 28th** of each month were eligible for claims.
+- **30% of these vehicles** filed a claim.
+
+#### For 2026
+
+- Additional claims generated between **Jan 1 – Feb 28**
+- **10% of vehicles with 4-year tenure filed claims**
+- Vehicles with a previous claim could file a **second claim**
+
+---
+
+# 🔗 Data Integration
+
+After generating the datasets, they were merged to create a unified analytical dataset.
+
+### Join Details
+Join Type : Left Join
+Join Key : Vehicle_ID
+
+
+This ensures all policies remain in the dataset, including vehicles without claims.
+
+### Final Dataset Export
+
+
+cleaned_insurance_analytics.csv
+
+
+---
+
+# 🧹 Data Cleaning
+
+Before analysis, the dataset was validated by:
+
+- Removing duplicate columns  
+- Handling missing claim values  
+- Converting date columns  
+- Verifying dataset integrity  
+- Validating claim distribution  
+
+Missing claim amounts were replaced with **0 for non-claim vehicles**.
+---
+
+# ⚙️ Feature Engineering
+
+Additional analytical variables were created:
+
+- **Claim_or_Not** → Binary indicator (1 = claim)  
+- **Purchase_Month** → Month of policy purchase  
+- **Claim_Year** → Claim year  
+- **Claim_Month** → Claim month  
+- **Tenure_Days** → Policy tenure converted to days  
+
+Tenure_Days = Policy_Tenure × 365
+
+---
+
+---
+
+# 📊 Analytical Questions Solved
+
+This project answers several key business questions.
+
+---
+
+### 1️⃣ What is the total premium collected in 2024?
+
+<p align="center">
+<img src="images/total_premium_analysis.png" width="500">
+</p>
+
+---
+
+### 2️⃣ What are the monthly claim costs in 2025 and 2026?
+
+<p align="center">
+<img src="images/monthly_claim_trend.png" width="500">
+</p>
+
+---
+
+### 3️⃣ Which policy tenure has the highest claim-to-premium ratio?
+
+<p align="center">
+<img src="images/loss_ratio_by_tenure.png" width="500">
+</p>
+
+---
+
+### 4️⃣ Does the month of policy purchase affect claim risk?
+
+<p align="center">
+<img src="images/claim_ratio_by_purchase_month.png" width="500">
+</p>
+
+---
+
+### 5️⃣ What is the potential future claim liability if all remaining vehicles claim once?
+
+<p align="center">
+<img src="images/claim_liability_distribution.png" width="500">
+</p>
+
+---
+
+### 6️⃣ How much premium has been earned vs remaining?
+
+<p align="center">
+<img src="images/earned_vs_remaining_premium.png" width="500">
+</p>
+
+---
+
+# 📊 Exploratory Data Analysis
+
+Exploratory analysis was performed using **Python (Pandas & NumPy)**.
+
+### Key Visualizations
+
+<p align="center">
+<img src="images/claim_distribution.png" width="650">
+</p>
+
+<p align="center">
+<img src="images/premium_distribution.png" width="650">
+</p>
+
+<p align="center">
+<img src="images/tenure_distribution.png" width="650">
+</p>
+
+These analyses help identify patterns in:
+
+- Claim frequency
+- Premium distribution
+- Risk exposure by policy tenure
+
+---
+
+# 📊 Power BI Dashboard
+
+An interactive Power BI dashboard was built to analyze portfolio performance.
+
+### Dashboard File
+Insurance_Analysis_Dashboard.pbix
+
+
+<p align="center">
+<img src="images/dashboard_overview.png" width="750">
+</p>
+
+### Dashboard Features
+
+- Premium vs Claim analysis  
+- Loss ratio monitoring  
+- Claim trends by month  
+- Policy tenure profitability  
+- Claim type distribution  
+
+---
+
+# 🚀 Business Recommendations
+
+### Pricing Optimization
+Policies with higher claim exposure (especially **1-year and 4-year tenures**) should have adjusted premium pricing.
+
+### Risk Monitoring
+Insurance providers should continuously monitor **long-tenure policies** to reduce future claim exposure.
+
+### Predictive Risk Modeling
+Machine learning models can be implemented to **predict claim probability** and improve underwriting decisions.
+
+### Portfolio Risk Monitoring
+Tracking claim trends over time helps insurers **identify emerging risk patterns early**.
+
+### Balanced Policy Portfolio
+Encouraging a mix of policy tenures helps maintain a **balanced risk profile**.
+
+---
+
+# 👩‍💻 Author
+
+**Mahak Bisht**  
+Aspiring **Data Analyst / Business Analyst**
+
+### Skills
+
+- SQL  
+- Python  
+- Power BI  
+- Data Analytics  
+- Business Intelligence  
+
+📧 **Email**  
+mahak.bisht2003@gmail.com  
+
+🔗 **LinkedIn**  
+https://www.linkedin.com/in/mahak-bisht-79241528a  
+
+🔗 **GitHub**  
+https://github.com/mahakb2003
